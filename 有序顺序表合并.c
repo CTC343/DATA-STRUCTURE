@@ -7,17 +7,17 @@ void inputOrderedList(int arr[], int *size) {
     int i;
 
     *size = 0;
-    //printf("ÇëÊäÈëÔªËØ¸öÊı: ");
+    //printf("è¯·è¾“å…¥å…ƒç´ ä¸ªæ•°: ");
     scanf("%d", size);
     
-    //printf("ÇëÊäÈëÔªËØ£¨·Çµİ¼õË³Ğò£©: ");
+    //printf("è¯·è¾“å…¥å…ƒç´ ï¼ˆéé€’å‡é¡ºåºï¼‰: ");
     for (i = 0; i < *size; i++) {
         scanf("%d", &temp);
         if (i == 0 || temp >= arr[i - 1]) {
             arr[i] = temp;
         } else {
-            //printf("ÊäÈëÎŞĞ§£¬µ±Ç°ÔªËØĞ¡ÓÚÇ°Ò»¸öÔªËØ£¬ÇëÖØĞÂÊäÈë: ");
-            i--; // ÖØĞÂÊäÈëµ±Ç°ÔªËØ
+            //printf("è¾“å…¥æ— æ•ˆï¼Œå½“å‰å…ƒç´ å°äºå‰ä¸€ä¸ªå…ƒç´ ï¼Œè¯·é‡æ–°è¾“å…¥: ");
+            i--; // é‡æ–°è¾“å…¥å½“å‰å…ƒç´ 
         }
     }
 }
@@ -58,16 +58,16 @@ int main() {
     int La[MAX_SIZE], Lb[MAX_SIZE], Lc[MAX_SIZE];
     int sizeA, sizeB, sizeC;
 
-    // ÊäÈëÓĞĞò±íLa
+    // è¾“å…¥æœ‰åºè¡¨La
     inputOrderedList(La, &sizeA);
     
-    // ÊäÈëÓĞĞò±íLb
+    // è¾“å…¥æœ‰åºè¡¨Lb
     inputOrderedList(Lb, &sizeB);
     
-    // ºÏ²¢LaºÍLbµ½Lc
+    // åˆå¹¶Laå’ŒLbåˆ°Lc
     mergeOrderedLists(La, sizeA, Lb, sizeB, Lc, &sizeC);
     
-    // Êä³ö½á¹û
+    // è¾“å‡ºç»“æœ
      printf("There are 5 elements in La,which are:");
     printList(La, sizeA);
      printf("There are 6 elements in Lb,which are:");
